@@ -4,42 +4,17 @@ body {
     flex-flow: row wrap;
     justify-content: center;
     margin: 0;
-    background-color: #2d2941;
 }
-
-header {
-    font-family: 'Nunito', sans-serif;
-    font-size: 9vw;
-    margin: 6vw;
-    color: white;
-    margin-bottom: 0;
-}
-
-.site {
+.frame {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     max-width: 1408px;
     width: 99vw;
 }
-
-.site > a > img {
-    width: 31.5vw;
-    max-width: 450px;
-    margin: 6vw;
-}
-
-.frame {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    max-width: 1422px;
-    width: 100vw;
-}
-
 .checkerboard {
-    max-width: 1422px;
-    width: 100vw;
+    max-width: 1408px;
+    width: 99vw;
 }
 
 .section {
@@ -48,32 +23,11 @@ header {
 
 .sidebar {
     display: flex;
-    max-width: 142px;
-    width: 10vw;
+    max-width: 128px;
+    width: 9vw;
     min-height: 9vw;
     justify-content: center;
     align-items: center;
-}
-.sidebar__fes1 {
-    background-color: #e50080;
-}
-.sidebar__fes2 {
-    background-color: #1ab1f6;
-}
-.sidebar__fes3 {
-    background-color: #f8b656;
-}
-.sidebar__fes4 {
-    background-color: #da57d8;
-}
-.sidebar__party1 {
-    background-color: #fb8a9b;
-}
-.sidebar__party2 {
-    background-color: #1a737d;
-}
-.sidebar__normal {
-    background-color: #c40035;
 }
 .sidebar__exchangeable-ur {
     background-color: #e50080;
@@ -108,22 +62,6 @@ img {
 
 }
 
-.icon {
-    display: flex;
-    width: 9vw;
-    height: 9vw;
-    max-width: 128px;
-    max-height: 128px;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon > img {
-    width: 7vw;
-    height: 7vw;
-    max-width: 100px;
-    max-height: 100px;
-}
 .card {
     width: 9vw;
     height: 9vw;
@@ -134,22 +72,6 @@ img {
     align-items: center;
     position: relative;
 }
-.sample {
-    width: 15vw;
-    height: 15vw;
-    max-width: 90px;
-    max-height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.sampleImg {
-    width: 15vw;
-    height: 15vw;
-    max-width: 90px;
-    max-height: 90px;
-}
 .section__sample {
     width: 32vw;
     max-width: 200px;
@@ -157,7 +79,7 @@ img {
     max-height: 62.5px;
     justify-content: center;
 }
-.event_sample {
+.sample {
     width: 16vw;
     height: 10vw;
     max-width: 100px;
@@ -167,7 +89,7 @@ img {
     align-items: center;
     position: relative;
 }
-.event_sampleImg {
+.sampleImg {
     width: 10vw;
     height: 10vw;
     max-width: 62.5px;
@@ -223,7 +145,7 @@ img {
     margin: 1vw;
 }
 
-.modalLongbutton {
+.modalLongButton {
     width: 32vw;
     height: 5vw;
     max-width: 200px;
@@ -271,14 +193,16 @@ label {
     display:inline-block;
     font-family: 'Nunito', sans-serif;
     color: #ff51c4;
-    font-size: 2.56vw; 
-    width: 16vw;
+    font-size: 3.2vw; 
+    width: 14.4vw;
     line-height: 100%;
-    max-width: 100px;
+    max-width: 90px;
 }
 input {
 	width: 16vw;
+    height: 4vw;
     max-width: 100px;
+    max-height: 25px;
     border: 0;
     border-radius: 10px;
     background-color: #b2ffdd;
@@ -313,8 +237,8 @@ input:focus {
 .profile {
     display: flex;
     justify-content: center;
-    max-width: 1422px;
-    width: 100vw;
+    max-width: 1408px;
+    width: 99vw;
 }
 
 .profile > a > img {
@@ -329,209 +253,98 @@ input:focus {
     opacity: 0%;
 }
 
-.invisible2 {
-    opacity: 0%;
-}
-
 .displayNone {
     display: none;
 }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 100%;
-    }
-    50% {
-        opacity: 0%;
-    }
-    100% {
-        opacity: 100%;
-    }
-}
-
-.animation {
-    animation: fadeInOut 5s infinite;
-}
-
-.honoka__grouporder {
+.honoka__order {
     order: 1;
 }
-.eli__grouporder {
+.eli__order {
     order: 2;
 }
-.kotori__grouporder {
+.kotori__order {
     order: 3;
 }
-.chika__grouporder {
+.umi__order {
     order: 4;
 }
-.riko__grouporder {
+.rin__order {
     order: 5;
 }
-.kanan__grouporder {
+.maki__order {
     order: 6;
 }
-.ayumu__grouporder {
+.nozomi__order {
     order: 7;
 }
-.kasumi__grouporder {
+.hanayo__order {
     order: 8;
 }
-.shizuku__grouporder {
+.nico__order {
     order: 9;
 }
-.karin__grouporder {
+.chika__order {
     order: 10;
 }
-.umi__grouporder {
+.riko__order {
     order: 11;
 }
-.rin__grouporder {
+.kanan__order {
     order: 12;
 }
-.maki__grouporder {
+.dia__order {
     order: 13;
 }
-.dia__grouporder {
+.you__order {
     order: 14;
 }
-.you__grouporder {
+.yoshiko__order {
     order: 15;
 }
-.yoshiko__grouporder {
+.hanamaru__order {
     order: 16;
 }
-.ai__grouporder {
+.mari__order {
     order: 17;
 }
-.kanata__grouporder {
+.ruby__order {
     order: 18;
 }
-.setsuna__grouporder {
+.ayumu__order {
     order: 19;
 }
-.emma__grouporder {
+.kasumi__order {
     order: 20;
 }
-.nozomi__grouporder {
+.shizuku__order {
     order: 21;
 }
-.hanayo__grouporder {
+.karin__order {
     order: 22;
 }
-.nico__grouporder {
+.ai__order {
     order: 23;
 }
-.hanamaru__grouporder {
+.kanata__order {
     order: 24;
 }
-.mari__grouporder {
+.setsuna__order {
     order: 25;
 }
-.ruby__grouporder {
+.emma__order {
     order: 26;
 }
-.rina__grouporder {
+.rina__order {
     order: 27;
 }
-.shioriko__grouporder {
+.shioriko__order {
     order: 28;
 }
-.mia__grouporder {
+.mia__order {
     order: 29;
 }
-.lanzhu__grouporder {
-    order: 30;
-}
-
-.honoka__memberorder {
-    order: 1;
-}
-.eli__memberorder {
-    order: 2;
-}
-.kotori__memberorder {
-    order: 3;
-}
-.umi__memberorder {
-    order: 4;
-}
-.rin__memberorder {
-    order: 5;
-}
-.maki__memberorder {
-    order: 6;
-}
-.nozomi__memberorder {
-    order: 7;
-}
-.hanayo__memberorder {
-    order: 8;
-}
-.nico__memberorder {
-    order: 9;
-}
-.chika__memberorder {
-    order: 10;
-}
-.riko__memberorder {
-    order: 11;
-}
-.kanan__memberorder {
-    order: 12;
-}
-.dia__memberorder {
-    order: 13;
-}
-.you__memberorder {
-    order: 14;
-}
-.yoshiko__memberorder {
-    order: 15;
-}
-.hanamaru__memberorder {
-    order: 16;
-}
-.mari__memberorder {
-    order: 17;
-}
-.ruby__memberorder {
-    order: 18;
-}
-.ayumu__memberorder {
-    order: 19;
-}
-.kasumi__memberorder {
-    order: 20;
-}
-.shizuku__memberorder {
-    order: 21;
-}
-.karin__memberorder {
-    order: 22;
-}
-.ai__memberorder {
-    order: 23;
-}
-.kanata__memberorder {
-    order: 24;
-}
-.setsuna__memberorder {
-    order: 25;
-}
-.emma__memberorder {
-    order: 26;
-}
-.rina__memberorder {
-    order: 27;
-}
-.shioriko__memberorder {
-    order: 28;
-}
-.mia__memberorder {
-    order: 29;
-}
-.lanzhu__memberorder {
+.lanzhu__order {
     order: 30;
 }
 
@@ -540,27 +353,17 @@ input:focus {
         font-size: 19px;
     }
     label {
-        font-size: 16px;
+        font-size: 20px;
     }
-    .modalSmallButton, .modalLongbutton {
+    .modalSmallButton, .modalLongButton {
         margin: 6px;
     }
-    .modalLongbutton {
+    .modalLongButton {
         font-size: 16px;
     }
 }
 @media screen and (min-width: 1408px) {
     .sidebar {
         min-height: 128px;
-    }
-}
-@media screen and (max-width: 1000px) {
-    .site > a > img {
-        width: 45vw;
-    }
-}
-@media screen and (max-width: 750px) {
-    .site > a > img {
-        width: 60vw;
     }
 }

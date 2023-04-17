@@ -275,10 +275,10 @@ function sortByMemberOnOff() {
     orderList.forEach(function(schoolidol) {
         let idol_cards = document.querySelectorAll("." + schoolidol);
         [].forEach.call(idol_cards, function(idol_card) {
-            idol_card.classList.toggle(schoolidol + "__memberorder");
+            idol_card.classList.toggle(schoolidol + "__order");
         });
     });
-    if (ur_cards[0].classList.contains("honoka__memberorder")) {
+    if (ur_cards[0].classList.contains("honoka__order")) {
         sortByMemberSwitch.innerText = "Sort by Member ON";
     } else {
         sortByMemberSwitch.innerText = "Sort by Member OFF";

@@ -21,16 +21,85 @@ db.collection('fes1').get().then((card)=>{
                 <img src=${doc.data().idolized} />
             </div>
             <div class="rainbow displayNone invisible">
-                <img src= />
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
             </div>
             <div class="signature invisible">
                 <img src=${doc.data().signature} />
             </div>
             <div class="limitbreak">
-                <img src= />
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
             </div>
         </div>`;
         $('.background_fes1').append(fes1_section)
+    })
+})
+db.collection('fes2').get().then((card)=>{
+    card.forEach((doc)=>{
+        let fes2_section = 
+        `<div class="card ${doc.data().cardType} ${doc.data().member}">
+            <div class="unidolized">
+                <img src=${doc.data().unidolized} />
+            </div>
+            <div class="idolized displayNone">
+                <img src=${doc.data().idolized} />
+            </div>
+            <div class="rainbow displayNone invisible">
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
+            </div>
+            <div class="signature invisible">
+                <img src=${doc.data().signature} />
+            </div>
+            <div class="limitbreak">
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
+            </div>
+        </div>`;
+        $('.background_fes2').append(fes2_section)
+    })
+})
+db.collection('fes3').get().then((card)=>{
+    card.forEach((doc)=>{
+        let fes3_section = 
+        `<div class="card ${doc.data().cardType} ${doc.data().member}">
+            <div class="unidolized">
+                <img src=${doc.data().unidolized} />
+            </div>
+            <div class="idolized displayNone">
+                <img src=${doc.data().idolized} />
+            </div>
+            <div class="rainbow displayNone invisible">
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
+            </div>
+            <div class="signature invisible">
+                <img src=${doc.data().signature} />
+            </div>
+            <div class="limitbreak">
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
+            </div>
+        </div>`;
+        $('.background_fes3').append(fes3_section)
+    })
+})
+db.collection('party1').get().then((card)=>{
+    card.forEach((doc)=>{
+        let party1_section = 
+        `<div class="card ${doc.data().cardType} ${doc.data().member}">
+            <div class="unidolized">
+                <img src=${doc.data().unidolized} />
+            </div>
+            <div class="idolized displayNone">
+                <img src=${doc.data().idolized} />
+            </div>
+            <div class="rainbow displayNone invisible">
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
+            </div>
+            <div class="signature invisible">
+                <img src=${doc.data().signature} />
+            </div>
+            <div class="limitbreak">
+                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
+            </div>
+        </div>`;
+        $('.background_party1').append(party1_section)
     })
 })
 
@@ -58,7 +127,7 @@ for (let i = 0; i < normal_cards.length; i++) {
 }
 
 function displayCard(cards, count, num) {
-    const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/limitbreak/";
+    const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/";
     if (count[num] % 7 === 0) {
         cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
         cards[num].children[2].classList.add("invisible");
@@ -312,7 +381,7 @@ function sortByGroupOnOff() {
     orderList.forEach(function(schoolidol) {
         let idol_cards = document.querySelectorAll("." + schoolidol);
         [].forEach.call(idol_cards, function(idol_card) {
-            idol_card.classList.toggle(schoolidol + "__grouporder");
+            idol_card.classList.toggle(schoolidol + "__order");
         });
     });
 
@@ -321,7 +390,7 @@ function sortByGroupOnOff() {
         icon.classList.toggle("displayNone");
     });
 
-    if (fes_cards[0].classList.contains("maki__grouporder")) {
+    if (fes_cards[0].classList.contains("maki__order")) {
         sortByGroupSwitch.innerText = "Sort by Group ON";
     } else {
         sortByGroupSwitch.innerText = "Sort by Group OFF";
