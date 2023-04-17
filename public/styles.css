@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap');
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0;
+    background-color: #2d2941;
+}
+
+header {
+    font-family: 'Nunito', sans-serif;
+    font-size: 9vw;
+    margin: 6vw;
+    color: white;
+    margin-bottom: 0;
+}
+
+.site {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    max-width: 1408px;
+    width: 99vw;
+}
+
+.site > a > img {
+    width: 31.5vw;
+    max-width: 450px;
+    margin: 6vw;
+}
+
+.frame {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    max-width: 1422px;
+    width: 100vw;
+}
+
+.checkerboard {
+    max-width: 1422px;
+    width: 100vw;
+}
+
+.section {
+    display: flex;
+}
+
+.sidebar {
+    display: flex;
+    max-width: 142px;
+    width: 10vw;
+    min-height: 9vw;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar__fes1 {
+    background-color: #e50080;
+}
+.sidebar__fes2 {
+    background-color: #1ab1f6;
+}
+.sidebar__fes3 {
+    background-color: #f8b656;
+}
+.sidebar__fes4 {
+    background-color: #da57d8;
+}
+.sidebar__party1 {
+    background-color: #fb8a9b;
+}
+.sidebar__party2 {
+    background-color: #1a737d;
+}
+.sidebar__normal {
+    background-color: #c40035;
+}
+.sidebar__exchangeable-ur {
+    background-color: #e50080;
+}
+.sidebar__unexchangeable-ur {
+    background-color: #1ab1f6;
+}
+.sidebar__exchangeable-sr {
+    background-color: #f8b656;
+}
+.sidebar__unexchangeable-sr {
+    background-color: #da57d8;
+}
+
+.background {
+    display: flex;
+    max-width: 1280px;
+    width: 90vw;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    background-color: #180134;
+}
+
+img {
+    display: block;
+    width: 9vw;
+    height: 9vw;
+    max-width: 128px;
+    max-height: 128px;
+    object-fit: contain;
+
+}
+
+.icon {
+    display: flex;
+    width: 9vw;
+    height: 9vw;
+    max-width: 128px;
+    max-height: 128px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon > img {
+    width: 7vw;
+    height: 7vw;
+    max-width: 100px;
+    max-height: 100px;
+}
+.card {
+    width: 9vw;
+    height: 9vw;
+    max-width: 128px;
+    max-height: 128px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.sample {
+    width: 15vw;
+    height: 15vw;
+    max-width: 90px;
+    max-height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.sampleImg {
+    width: 15vw;
+    height: 15vw;
+    max-width: 90px;
+    max-height: 90px;
+}
+.section__sample {
+    width: 32vw;
+    max-width: 200px;
+    height: 10vw;
+    max-height: 62.5px;
+    justify-content: center;
+}
+.event_sample {
+    width: 16vw;
+    height: 10vw;
+    max-width: 100px;
+    max-height: 62.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.event_sampleImg {
+    width: 10vw;
+    height: 10vw;
+    max-width: 62.5px;
+    max-height: 62.5px;
+}
+.unidolized {
+    position: absolute;
+}
+.idolized {
+    position: absolute;
+}
+.rainbow {
+    position: absolute;
+}
+.signature {
+    position: absolute;
+}
+
+.limitbreak {
+    position: absolute;
+}
+
+.button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: #ff51c4;
+    font-size: 3vw;
+    color: white;
+    width: 16vw;
+    height: 12vw;
+    max-width: 100px;
+    max-height: 75px;
+    line-height: 110%;
+    margin: 3.2vw;
+    border-radius: 10px;
+    border: none;
+}
+
+.applyDataButton {
+    margin: 0;
+}
+
+.modalSmallButton {
+    width: 15vw;
+    height: 9vw;
+    max-width: 94px;
+    max-height: 55px;
+    margin: 1vw;
+}
+
+.modalLongbutton {
+    width: 32vw;
+    height: 5vw;
+    max-width: 200px;
+    max-height: 30px;
+    margin: 1vw;
+    font-size: 2.5vw;
+}
+
+dialog {
+    background-color: #F8C8C4;
+    border: 0;
+    border-radius: 20px;
+    -ms-overflow-style: none;  /* IE and Edge 스크롤바 없애기*/
+    scrollbar-width: none; /*Firefox 스크롤바 없애기*/
+}
+
+dialog::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal_body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    height: 40vw;
+    max-width: 250px;
+    max-height: 250px;
+}
+.input_body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    height: 16vw;
+    max-height: 100px;
+}
+
+label {
+    display:inline-block;
+    font-family: 'Nunito', sans-serif;
+    color: #ff51c4;
+    font-size: 2.56vw; 
+    width: 16vw;
+    line-height: 100%;
+    max-width: 100px;
+}
+input {
+	width: 16vw;
+    max-width: 100px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #b2ffdd;
+}
+
+input:focus {
+    outline: 2px solid #00C7B1;
+}
+
+.dataArea {
+    width: 32vw;
+    height: 24vw;
+    max-width: 200px;
+    max-height: 150px;
+    resize: none;
+    border: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: #b2ffdd;
+    border-radius: 10px;
+    -ms-overflow-style: none;  /* IE and Edge 스크롤바 없애기*/
+    scrollbar-width: none; /*Firefox 스크롤바 없애기*/
+}
+
+.dataArea:focus {
+    outline: 0;
+}
+
+.dataArea::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera 스크롤바 없애기*/
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    max-width: 1422px;
+    width: 100vw;
+}
+
+.profile > a > img {
+    width: 6vw;
+    height: 7.5vw;
+    max-width: 50px;
+    max-height: 62.5px;
+    margin: 2vw;
+}
+
+.invisible {
+    opacity: 0%;
+}
+
+.invisible2 {
+    opacity: 0%;
+}
+
+.displayNone {
+    display: none;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 100%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.animation {
+    animation: fadeInOut 5s infinite;
+}
+
+.honoka__grouporder {
+    order: 1;
+}
+.eli__grouporder {
+    order: 2;
+}
+.kotori__grouporder {
+    order: 3;
+}
+.chika__grouporder {
+    order: 4;
+}
+.riko__grouporder {
+    order: 5;
+}
+.kanan__grouporder {
+    order: 6;
+}
+.ayumu__grouporder {
+    order: 7;
+}
+.kasumi__grouporder {
+    order: 8;
+}
+.shizuku__grouporder {
+    order: 9;
+}
+.karin__grouporder {
+    order: 10;
+}
+.umi__grouporder {
+    order: 11;
+}
+.rin__grouporder {
+    order: 12;
+}
+.maki__grouporder {
+    order: 13;
+}
+.dia__grouporder {
+    order: 14;
+}
+.you__grouporder {
+    order: 15;
+}
+.yoshiko__grouporder {
+    order: 16;
+}
+.ai__grouporder {
+    order: 17;
+}
+.kanata__grouporder {
+    order: 18;
+}
+.setsuna__grouporder {
+    order: 19;
+}
+.emma__grouporder {
+    order: 20;
+}
+.nozomi__grouporder {
+    order: 21;
+}
+.hanayo__grouporder {
+    order: 22;
+}
+.nico__grouporder {
+    order: 23;
+}
+.hanamaru__grouporder {
+    order: 24;
+}
+.mari__grouporder {
+    order: 25;
+}
+.ruby__grouporder {
+    order: 26;
+}
+.rina__grouporder {
+    order: 27;
+}
+.shioriko__grouporder {
+    order: 28;
+}
+.mia__grouporder {
+    order: 29;
+}
+.lanzhu__grouporder {
+    order: 30;
+}
+
+.honoka__memberorder {
+    order: 1;
+}
+.eli__memberorder {
+    order: 2;
+}
+.kotori__memberorder {
+    order: 3;
+}
+.umi__memberorder {
+    order: 4;
+}
+.rin__memberorder {
+    order: 5;
+}
+.maki__memberorder {
+    order: 6;
+}
+.nozomi__memberorder {
+    order: 7;
+}
+.hanayo__memberorder {
+    order: 8;
+}
+.nico__memberorder {
+    order: 9;
+}
+.chika__memberorder {
+    order: 10;
+}
+.riko__memberorder {
+    order: 11;
+}
+.kanan__memberorder {
+    order: 12;
+}
+.dia__memberorder {
+    order: 13;
+}
+.you__memberorder {
+    order: 14;
+}
+.yoshiko__memberorder {
+    order: 15;
+}
+.hanamaru__memberorder {
+    order: 16;
+}
+.mari__memberorder {
+    order: 17;
+}
+.ruby__memberorder {
+    order: 18;
+}
+.ayumu__memberorder {
+    order: 19;
+}
+.kasumi__memberorder {
+    order: 20;
+}
+.shizuku__memberorder {
+    order: 21;
+}
+.karin__memberorder {
+    order: 22;
+}
+.ai__memberorder {
+    order: 23;
+}
+.kanata__memberorder {
+    order: 24;
+}
+.setsuna__memberorder {
+    order: 25;
+}
+.emma__memberorder {
+    order: 26;
+}
+.rina__memberorder {
+    order: 27;
+}
+.shioriko__memberorder {
+    order: 28;
+}
+.mia__memberorder {
+    order: 29;
+}
+.lanzhu__memberorder {
+    order: 30;
+}
+
+@media screen and (min-width: 625px) {
+    .button {
+        font-size: 19px;
+    }
+    label {
+        font-size: 16px;
+    }
+    .modalSmallButton, .modalLongbutton {
+        margin: 6px;
+    }
+    .modalLongbutton {
+        font-size: 16px;
+    }
+}
+@media screen and (min-width: 1408px) {
+    .sidebar {
+        min-height: 128px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .site > a > img {
+        width: 45vw;
+    }
+}
+@media screen and (max-width: 750px) {
+    .site > a > img {
+        width: 60vw;
+    }
+}

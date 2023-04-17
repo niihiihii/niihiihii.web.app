@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/favicon.ico" type="image/x-icon">
+    <title>FES Party UR Check</title>
+  </head>
+  <body>
+    <div class="frame">
+      <div class="checkerboard">
+          <div class="section section__fes1">
+              <div class="sidebar sidebar__fes1">
+                  <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/sidebar/1st_fes.png" />
+              </div>
+              <div class="background background__fes1"></div>
+          </div>
+          <div class="section section__fes2">
+              <div class="sidebar sidebar__fes2">
+                  <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/sidebar/2nd_fes.png" />
+              </div>
+              <div class="background background__fes2"></div>
+          </div>
+          <div class="section section__fes3">
+              <div class="sidebar sidebar__fes3">
+                  <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/sidebar/3rd_fes.png" />
+              </div>
+              <div class="background background__fes3"></div>
+          </div>
+          <!-- <div class="section section__fes4">
+              <div class="sidebar sidebar__fes4">
+                  <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/sidebar/4th_fes.png" />
+              </div>
+              <div class="background background__fes4"></div>
+          </div> -->
+          <div class="section section__party1">
+              <div class="sidebar sidebar__party1">
+                  <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/sidebar/1st_party.png" />
+              </div>
+              <div class="background background__party1"></div>
+          </div>
+          <!-- <div class="section section__party2">
+              <div class="sidebar sidebar__party2">
+                  <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/sidebar/2nd_party.png" />
+              </div>
+              <div class="background background__party2"></div>
+          </div> -->
+          <div class="section section__normal">
+              <div class="sidebar sidebar__normal">
+                  <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/sidebar/crazy_normal_ur.png" />
+              </div>
+              <div class="background background__normal"></div>
+          </div>
+      </div>
+      <button class="button downImgButton" type="button">Save<br>Image</button>
+      <button class="button inputDataButton" type="button">Input<br>Data</button>
+      <dialog class="inputDataModal">
+          <div class="modal_body">
+              <div class="input_body">
+                  <div>
+                      <label for="fes_data">fes_data:</label>
+                      <input id="fes_data" type="text" />
+                  </div>
+                  <div>
+                      <label for="party_data">party_data:</label>
+                      <input id="party_data" type="text" />
+                  </div>
+                  <div>
+                      <label for="normal_data">normal_data:</label>
+                      <input id="normal_data" type="text" />
+                  </div>
+              </div>
+              <button class="button applyDataButton" type="button">Apply<br>Data</button>
+          </div>
+      </dialog>
+      <button class="button printDataButton" type="button">Copy<br>Data</button>
+      <dialog class="copyDataModal">
+          <div class="modal_body">
+              <textarea class="dataArea" spellcheck="false"></textarea>
+              <button class="button modalSmallButton copyDataButton" type="button">Copy<br>Data</button>
+              <button class="button modalSmallButton copyDataModalCloseButton" type="button">Close</button>
+          </div>
+      </dialog>
+      <button class="button settingsButton" type="button">Settings</button>
+      <dialog class="settingsModal">
+          <div class="modal_body settings_modal_body">
+              <div class="sample">
+                  <div class="unidolized">
+                      <img class="sampleImg" src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/party/025_party1_kasumi.png" />
+                  </div>
+                  <div class="idolized displayNone">
+                      <img class="sampleImg" src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/party/025_party1_kasumi_idolized.png" />
+                  </div>
+                  <div class="rainbow sample__rainbow invisible2">
+                      <img class="sampleImg animation" src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/rainbow/rainbow.png" />
+                  </div>
+                  <div class="signature sample__signature">
+                      <img class="sampleImg animation" src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/signatures/kasumi.png" />
+                  </div>
+                  <div class="limitbreak sample__limitbreak">
+                      <img class="sampleImg" src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/limitbreak/limitbreak5.png" />
+                  </div>
+              </div>
+              <button class="button modalLongButton changeCardStyleButton" type="button">Signature</button>
+              <button class="button modalLongButton sortByGroupSwitch" type="button">Sort by Group OFF</button>
+              <button class="button modalSmallButton idolizedSwitch" type="button">Idolized<br>OFF</button>
+              <button class="button modalSmallButton settingsModalCloseButton" type="button">Close</button>
+          </div>
+      </dialog>
+      <div class="profile">
+          <a href="https://twitter.com/niihiihii">
+              <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/profile/twitter.png"/>
+          </a>
+          <a href="https://github.com/niihiihii">
+              <img src="https://raw.githubusercontent.com/niihiihii/sifas_fesparty_statusboard/main/profile/github.png"/>
+          </a>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyCmDdmzq6Ze2uS1pR4fworeRQfjJ7nwg28",
+        authDomain: "niihiihii.firebaseapp.com",
+        databaseURL: "https://niihiihii-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "niihiihii",
+        storageBucket: "niihiihii.appspot.com",
+        messagingSenderId: "357132681727",
+        appId: "1:357132681727:web:bcbc59506a45223387a7ca",
+        measurementId: "G-BXCMLREQTZ"
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="fespartycheck.js"></script>  
+
+
+  </body>
+</html>
