@@ -8,123 +8,50 @@ document.documentElement.addEventListener('touchend', function (event) {
         } lastTouchEnd = now; 
     }, false);
 /* block 'double tap zoomin' */
+let fes_cards = [];
+let party_cards = [];
+let normal_cards = [];
 
 const db = firebase.firestore();
-db.collection('fes1').get().then((card)=>{
-    card.forEach((doc)=>{
-        let fes1_section = 
-        `<div class="card ${doc.data().cardType} ${doc.data().member}">
-            <div class="unidolized">
-                <img src=${doc.data().unidolized} />
-            </div>
-            <div class="idolized displayNone">
-                <img src=${doc.data().idolized} />
-            </div>
-            <div class="rainbow displayNone invisible">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
-            </div>
-            <div class="signature invisible">
-                <img src=${doc.data().signature} />
-            </div>
-            <div class="limitbreak">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
-            </div>
-        </div>`;
-        $('.background_fes1').append(fes1_section)
+function appendCard(section) {
+    db.collection(section).get().then((card)=>{
+        card.forEach((doc)=>{
+            let card_section = 
+            `<div class="card ${doc.data().cardType} ${doc.data().member}">
+                <div class="unidolized">
+                    <img src=${doc.data().unidolized} />
+                </div>
+                <div class="idolized displayNone">
+                    <img src=${doc.data().idolized} />
+                </div>
+                <div class="rainbow displayNone invisible">
+                    <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
+                </div>
+                <div class="signature invisible">
+                    <img src=${doc.data().signature} />
+                </div>
+                <div class="limitbreak">
+                    <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
+                </div>
+            </div>`;
+            $('.background__' + section).append(card_section);
+        });
+        fes_cards = $('.fes-card');
+        party_cards = $('.party-card');
+        normal_cards = $('.normal-card');
     })
-})
-db.collection('fes2').get().then((card)=>{
-    card.forEach((doc)=>{
-        let fes2_section = 
-        `<div class="card ${doc.data().cardType} ${doc.data().member}">
-            <div class="unidolized">
-                <img src=${doc.data().unidolized} />
-            </div>
-            <div class="idolized displayNone">
-                <img src=${doc.data().idolized} />
-            </div>
-            <div class="rainbow displayNone invisible">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
-            </div>
-            <div class="signature invisible">
-                <img src=${doc.data().signature} />
-            </div>
-            <div class="limitbreak">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
-            </div>
-        </div>`;
-        $('.background_fes2').append(fes2_section)
-    })
-})
-db.collection('fes3').get().then((card)=>{
-    card.forEach((doc)=>{
-        let fes3_section = 
-        `<div class="card ${doc.data().cardType} ${doc.data().member}">
-            <div class="unidolized">
-                <img src=${doc.data().unidolized} />
-            </div>
-            <div class="idolized displayNone">
-                <img src=${doc.data().idolized} />
-            </div>
-            <div class="rainbow displayNone invisible">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
-            </div>
-            <div class="signature invisible">
-                <img src=${doc.data().signature} />
-            </div>
-            <div class="limitbreak">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
-            </div>
-        </div>`;
-        $('.background_fes3').append(fes3_section)
-    })
-})
-db.collection('party1').get().then((card)=>{
-    card.forEach((doc)=>{
-        let party1_section = 
-        `<div class="card ${doc.data().cardType} ${doc.data().member}">
-            <div class="unidolized">
-                <img src=${doc.data().unidolized} />
-            </div>
-            <div class="idolized displayNone">
-                <img src=${doc.data().idolized} />
-            </div>
-            <div class="rainbow displayNone invisible">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
-            </div>
-            <div class="signature invisible">
-                <img src=${doc.data().signature} />
-            </div>
-            <div class="limitbreak">
-                <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
-            </div>
-        </div>`;
-        $('.background_party1').append(party1_section)
-    })
-})
-
-
-const fes_cards = document.querySelectorAll(".fes-card");
-const party_cards = document.querySelectorAll(".party-card");
-const normal_cards = document.querySelectorAll(".normal-card");
-
-const fes_count = [];
-
-for (let i = 0; i < fes_cards.length; i++) {
-    fes_count.push(0);
 }
 
-const party_count = [];
+appendCard('fes1');
+appendCard('fes2');
+appendCard('fes3');
+appendCard('party1');
+appendCard('normal');
 
-for (let i = 0; i < party_cards.length; i++) {
-    party_count.push(0);
-}
 
-const normal_count = [];
 
-for (let i = 0; i < normal_cards.length; i++) {
-    normal_count.push(0);
-}
+
+
 
 function displayCard(cards, count, num) {
     const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/";
@@ -163,15 +90,25 @@ function changeCard(cards, count, num) {
     displayCard(cards, count, num);
 }
 
-for (let i = 0; i < fes_count.length; i++) {
-    fes_cards[i].addEventListener("click", () => changeCard(fes_cards, fes_count ,i));
-}
-for (let i = 0; i < party_count.length; i++) {
-    party_cards[i].addEventListener("click", () => changeCard(party_cards, party_count, i));
-}
-for (let i = 0; i < normal_count.length; i++) {
-    normal_cards[i].addEventListener("click", () => changeCard(normal_cards, normal_count, i));
-}
+const fes_count = [];
+const party_count = [];
+const normal_count = [];
+
+setTimeout(() => {
+    [].forEach.call(fes_cards, () => {fes_count.push(0);});
+    [].forEach.call(party_cards, () => {party_count.push(0);});
+    [].forEach.call(normal_cards, () => {normal_count.push(0);});
+
+    for (let i = 0; i < fes_count.length; i++) {  
+        fes_cards[i].addEventListener("click", () => changeCard(fes_cards, fes_count ,i));
+    }
+    for (let i = 0; i < party_count.length; i++) {
+        party_cards[i].addEventListener("click", () => changeCard(party_cards, party_count, i));
+    }
+    for (let i = 0; i < normal_count.length; i++) {
+        normal_cards[i].addEventListener("click", () => changeCard(normal_cards, normal_count, i));
+    }
+}, 1000);
 
 
 /* Save Image Button */
