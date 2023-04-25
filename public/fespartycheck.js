@@ -25,13 +25,13 @@ function appendCard(section) {
                     <img src=${doc.data().idolized} />
                 </div>
                 <div class="rainbow invisible invisible2">
-                    <img class="animation" src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
+                    <img class="animation" src="/rainbow/rainbow.png" />
                 </div>
                 <div class="signature invisible">
                     <img class="animation" src=${doc.data().signature} />
                 </div>
                 <div class="limitbreak">
-                    <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
+                    <img src="/limitbreak/overlay.png" />
                 </div>
             </div>`;
             $('.background__' + section).append(card_section);
@@ -56,33 +56,32 @@ appendCard('normal');
 
 
 function displayCard(cards, count, num) {
-    const limitbreaklink ="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/";
     if (count[num] % 7 === 0) {
-        cards[num].children[4].children[0].src = limitbreaklink + "overlay.png";
+        cards[num].children[4].children[0].src = "/limitbreak/overlay.png";
         cards[num].children[2].classList.add("invisible");
         cards[num].children[3].classList.add("invisible");
     } else if (count[num] % 7 === 1) {
-        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak0.png";
+        cards[num].children[4].children[0].src = "/limitbreak/limitbreak0.png";
         cards[num].children[2].classList.add("invisible");
         cards[num].children[3].classList.add("invisible");
     } else if (count[num] % 7 === 2) {
-        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak1.png";
+        cards[num].children[4].children[0].src = "/limitbreak/limitbreak1.png";
         cards[num].children[2].classList.add("invisible");
         cards[num].children[3].classList.add("invisible");
     } else if (count[num] % 7 === 3) {
-        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak2.png";
+        cards[num].children[4].children[0].src = "/limitbreak/limitbreak2.png";
         cards[num].children[2].classList.add("invisible");
         cards[num].children[3].classList.add("invisible");
     } else if (count[num] % 7 === 4) {
-        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak3.png";
+        cards[num].children[4].children[0].src = "/limitbreak/limitbreak3.png";
         cards[num].children[2].classList.add("invisible");
         cards[num].children[3].classList.add("invisible");
     } else if (count[num] % 7 === 5) {
-        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak4.png";
+        cards[num].children[4].children[0].src = "/limitbreak/limitbreak4.png";
         cards[num].children[2].classList.add("invisible");
         cards[num].children[3].classList.add("invisible");
     } else {
-        cards[num].children[4].children[0].src = limitbreaklink + "limitbreak5.png";
+        cards[num].children[4].children[0].src = "/limitbreak/limitbreak5.png";
         cards[num].children[2].classList.remove("invisible");
         cards[num].children[3].classList.remove("invisible");
     }
