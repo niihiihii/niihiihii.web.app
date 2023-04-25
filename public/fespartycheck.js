@@ -24,11 +24,11 @@ function appendCard(section) {
                 <div class="idolized displayNone">
                     <img src=${doc.data().idolized} />
                 </div>
-                <div class="rainbow displayNone invisible">
-                    <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
+                <div class="rainbow invisible invisible2">
+                    <img class="animation" src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/rainbow/rainbow.png" />
                 </div>
                 <div class="signature invisible">
-                    <img src=${doc.data().signature} />
+                    <img class="animation" src=${doc.data().signature} />
                 </div>
                 <div class="limitbreak">
                     <img src="https://raw.githubusercontent.com/niihiihii/niihiihii.web.app/main/limitbreak/overlay.png" />
@@ -39,6 +39,8 @@ function appendCard(section) {
         fes_cards = $('.fes-card');
         party_cards = $('.party-card');
         normal_cards = $('.normal-card');
+        signature = $(".signature");
+        rainbow = $(".rainbow");
     })
 }
 
@@ -342,8 +344,8 @@ sortByGroupSwitch.addEventListener("click", sortByGroupOnOff);
 
 
 /* Change Card Style Button */
-const signature = document.querySelectorAll(".signature");
-const rainbow = document.querySelectorAll(".rainbow");
+let signature = $(".signature");
+let rainbow = $(".rainbow");
 
 function changeCardStyle() {
     changeCardStyleButton_click_count++;
